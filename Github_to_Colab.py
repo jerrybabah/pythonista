@@ -6,7 +6,7 @@ COLAB_URL = 'https://colab.research.google.com/github'
 
 
 def main():
-        if not appex.is_running_extension():
+	if not appex.is_running_extension():
 		print('This script is intended to be run from the sharing extension.')
 		return
 	else:
@@ -19,13 +19,13 @@ def main():
 			path = parsed_url.path
 			last_path = path.split("/")[-1]
 			
-			is_not_directory = last_path.find(".") != 1
-			if is_not_directory:
+			is_directory = last_path.find(".") == -1
+			if not is_directory:
 				ext = last_path.split(".")[-1]
 			else:
-				ext = ""
+				ext = None
 				
-			if is_not_directory and ext == "ipynb":	
+			if not is_directory and ext == "ipynb":	
 				new_url = COLAB_URL + parsed_url.path
 				webbrowser.open_new_tab(new_url)
 			else:
