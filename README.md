@@ -4,3 +4,4 @@
 __기능 설명__
 * Github to Colab: 깃허브에 저장되어 있는 jupyter notebook을 바로 코랩으로 열 수 있는 코드입니다.
 * Email to My Evernote: 자기 에버노트 계정에 이메일을 보냄으로써 웹클리핑을 합니다.
+* Translate: 드래그로 선택했거나 복사한 문장을 한글로 번역해 줍니다.
